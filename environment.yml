@@ -1,0 +1,21 @@
+name: TEC_miTarget
+
+dependencies:
+  - pip
+  - cudatoolkit
+  - python=3.8
+  - pytorch=1.13
+  - torchvision
+  - biopython=1.76
+  - h5py
+  - matplotlib
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - seaborn
+  - setuptools=58.2.0
+  - tqdm
+  - attrdict
+  - einops
+  - regex
