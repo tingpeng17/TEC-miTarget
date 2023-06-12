@@ -2,6 +2,19 @@
 
 ```
 cd TEC-miTarget
+mkdir output
+mkdir output/exp-miRAW
+mkdir output/exp-DeepMirTar
+mkdir output/exp-deepTargetPro
+mkdir output/exp-miRAW/model
+mkdir output/exp-miRAW/evaluate
+mkdir output/exp-miRAW/predict
+mkdir output/exp-DeepMirTar/model
+mkdir output/exp-DeepMirTar/evaluate
+mkdir output/exp-DeepMirTar/predict
+mkdir output/exp-deepTargetPro/model
+mkdir output/exp-deepTargetPro/evaluate
+mkdir output/exp-deepTargetPro/predict
 ```
 
 # setup the enviroment
