@@ -65,7 +65,7 @@ python ../../code/evaluate_transcript_level.py  --mirna_file ../../datasets/data
 
 ```
 cd output/exp-miRAW
-python ../code/predict_sequence_level.py --pairs ../../datasets/data/miRAW/test_seed_1234.txt --model ./model/best_model/model.sav --device 0 --outfile ./predict/
+python ../../code/predict_sequence_level.py --pairs ../../datasets/data/miRAW/test_seed_1234.txt --model ./model/best_model/model.sav --device 0 --outfile ./predict/
 ```
 
 
