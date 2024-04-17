@@ -1,4 +1,4 @@
-# preparation
+# Preparation
 
 ```
 cd TEC-miTarget
@@ -17,19 +17,19 @@ mkdir output/exp-deepTargetPro/evaluate
 mkdir output/exp-deepTargetPro/predict
 ```
 
-# setup the enviroment
+# Setup the enviroment
 
 ```
 conda env create --file environment.yml
 ```
 
-# activate the enviroment
+# Activate the enviroment
 
 ```
 conda activate TEC_miTarget
 ```
 
-# train
+# Train
 
 ```
 cd output/exp-miRAW
@@ -46,26 +46,28 @@ cd output/exp-deepTargetPro
 python ../../code/train.py --train ../../datasets/data/deepTargetPro/train_seed_1234.txt --outdir ./model/ --no-w --valid ../../datasets/data/deepTargetPro/valid_seed_1234.txt
 ```
 
-# evaluate
-## sequence level
+# Evaluate
+## Sequence level
 
 ```
 cd output/exp-miRAW
 python ../../code/evaluate_sequence_level.py --test ../../datasets/data/miRAW/test_seed_1234.txt --device 0 --outdir ./evaluate/ --model ./model/best_model/model.sav
 ```
 
-## transcript level
+## Transcript level
 
 ```
 cd output/exp-deepTargetPro
 python ../../code/evaluate_transcript_level.py  --mirna_file ../../datasets/data/deepTargetPro/mirna.fasta --mrna_file ../../datasets/data/deepTargetPro/mrna.fasta --query_file ../../datasets/data/deepTargetPro/test_split_0.csv --model ./model/best_model/model.sav --outfile ./evaluate/ --device 0
 ```
 
-# predict
+# Predict
+
+Users need to prepare their data in the form of [pairs-need-predict.txt](pairs-need-predict.txt), and then run the following command.
 
 ```
 cd output/exp-miRAW
-python ../../code/predict_sequence_level.py --pairs ../../datasets/data/miRAW/test_seed_1234.txt --model ./model/best_model/model.sav --device 0 --outfile ./predict/
+python ../../code/predict_sequence_level.py --pairs ../../pairs-need-predict.txt --model ./model/best_model/model.sav --device 0 --outfile ./predict/
 ```
 
 
