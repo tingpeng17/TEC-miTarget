@@ -1,6 +1,6 @@
 TEC-miTarget is a model utilizing deep learning methods for microRNA target prediction. TEC-miTarget uses a pair of miRNA and candidate target site sequences as inputs and predicts the interaction probability between them. 
 
-The model weights we have trained are available on Google Drive (https://drive.google.com/file/d/1L9eQYseXn1cctfl9jEHZ8Z_mpeA_vcKF/view?usp=drive_link). If you use TEC-miTarget in your work, please cite the following publication:
+The model weights we have trained are available on [Google Drive](https://drive.google.com/file/d/1L9eQYseXn1cctfl9jEHZ8Z_mpeA_vcKF/view?usp=drive_link). If you use TEC-miTarget in your work, please cite the following publication:
 
 TEC-miTarget: enhancing microRNA target prediction based on deep learning of ribonucleic acid sequences
 
@@ -78,7 +78,7 @@ python ../../code/evaluate_transcript_level.py  --mirna_file ../../datasets/data
 
 # Prediction
 
-Users need to prepare their data in the form of [pairs-need-predict.txt](pairs-need-predict.txt) (miRNA-sequence  candidate-target-site-sequence), and then run the following command.
+Users need to prepare their data in the form of [pairs.txt](pairs.txt) (miRNA-sequence  candidate-target-site-sequence), and then run the following command.
 
 ```
 cd output/exp-miRAW
