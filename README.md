@@ -69,5 +69,10 @@ Users need to prepare their data in the form of [pairs-need-predict.txt](pairs-n
 cd output/exp-miRAW
 python ../../code/predict_sequence_level.py --pairs ../../pairs-need-predict.txt --model ./model/best_model/model.sav --device 0 --outfile ./predict/
 ```
-
-
+The results will be shown in the predict folder as predict.tsv
+| miRNA-sequence | mRNA-sequence | p |  
+| :--: | :--: | :--: |  
+| >CGUGUACACGUGUGUCGGCCCAC | >TGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCAAGA | 0.00021147158986423165 |  
+| GAUGGACGUGCUUGUCGUGAAAC | TGTCTAAAGGTATACTGTCCAACTCTTAAGCACTTTATAT | 9998706579208374 |  
+| ... | ... | ... |
+where p is the interaction probability
