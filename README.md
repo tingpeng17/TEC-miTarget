@@ -30,7 +30,7 @@ mkdir output/exp-deepTargetPro/predict
 
 ## Preparation for evaluation and prediction
 
-Download the trained model weights from Google Drive (https://drive.google.com/file/d/1L9eQYseXn1cctfl9jEHZ8Z_mpeA_vcKF/view?usp=drive_link), unzip them and place the exp-miRAW, exp-DeepMirTar, and exp-deepTargetPro folders in the output folder.
+Download the trained model weights from [Google Drive](https://drive.google.com/file/d/1L9eQYseXn1cctfl9jEHZ8Z_mpeA_vcKF/view?usp=drive_link), unzip them and place the exp-miRAW, exp-DeepMirTar, and exp-deepTargetPro folders in the output folder.
 
 # Setup the enviroment
 
