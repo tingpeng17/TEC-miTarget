@@ -63,7 +63,7 @@ python ../../code/evaluate_transcript_level.py  --mirna_file ../../datasets/data
 
 # Predict
 
-Users need to prepare their data in the form of [pairs-need-predict.txt](pairs-need-predict.txt), and then run the following command.
+Users need to prepare their data in the form of [pairs-need-predict.txt](pairs-need-predict.txt) (miRNA-sequence\tmRNA-sequence\n), and then run the following command.
 
 ```
 cd output/exp-miRAW
