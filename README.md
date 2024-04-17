@@ -1,4 +1,7 @@
-TEC-miTarget is a model utilizing deep learning methods for microRNA target prediction. TEC-miTarget uses a pair of miRNA and candidate target site sequences as inputs and predicts the interaction probability between them. The model weights we have trained are available on Google Drive (https://drive.google.com/file/d/1L9eQYseXn1cctfl9jEHZ8Z_mpeA_vcKF/view?usp=drive_link). If you use TEC-miTarget in your work, please cite the following publication:
+TEC-miTarget is a model utilizing deep learning methods for microRNA target prediction. TEC-miTarget uses a pair of miRNA and candidate target site sequences as inputs and predicts the interaction probability between them. 
+
+The model weights we have trained are available on Google Drive (https://drive.google.com/file/d/1L9eQYseXn1cctfl9jEHZ8Z_mpeA_vcKF/view?usp=drive_link). If you use TEC-miTarget in your work, please cite the following publication:
+
 TEC-miTarget: enhancing microRNA target prediction based on deep learning of ribonucleic acid sequences
 
 # Preparation
