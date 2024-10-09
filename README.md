@@ -82,7 +82,7 @@ Users need to prepare their data in the form of [pairs.txt](pairs.txt) (miRNA-se
 
 ```
 cd output/exp-miRAW
-python ../../code/predict_sequence_level.py --pairs ../../pairs-need-predict.txt --model ./model/best_model/model.sav --device 0 --outfile ./predict/
+python ../../code/predict_sequence_level.py --pairs ../../pairs.txt --model ./model/best_model/model.sav --device 0 --outfile ./predict/
 ```
 The results will be shown in the predict folder as predict.tsv
 | miRNA-sequence | candidate-target-site-sequence | p |  
