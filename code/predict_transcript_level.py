@@ -439,9 +439,20 @@ def main(args):
                             dset = cmap_file.require_dataset(f"{n0}x{n1}", cm_np.shape, np.float32)
                             dset[:] = cm_np            
     cmap_file.close()
+    df=pd.read_csv(outPathAll,sep='\t')
+    idx = df.groupby(['query_ids', 'target_ids'])['predictions'].idxmax()
+    df=df.loc[idx]
+    df = df[["query_ids", "target_ids", "predictions"]]
+    df.to_csv(outPathAll[:-4]+'-gene-level.tsv', sep="\t", index=False)
+    df=pd.read_csv(outPathPos,sep='\t')
+    idx = df.groupby(['query_ids', 'target_ids'])['predictions'].idxmax()
+    df=df.loc[idx]
+    df = df[["query_ids", "target_ids", "predictions"]]
+    df.to_csv(outPathAll[:-4]+'-gene-level.tsv', sep="\t", index=False)
     
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser = add_args(parser)
     main(parser.parse_args())
+    
