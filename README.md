@@ -62,7 +62,7 @@ python ../../code/train.py --train ../../datasets/data/deepTargetPro/train_seed_
 ```
 
 # Evaluation
-## Sequence level
+## Sequence (binding site) level
 
 ```
 cd output/exp-miRAW
@@ -77,8 +77,8 @@ python ../../code/evaluate_transcript_level.py  --mirna_file ../../datasets/data
 ```
 
 # Prediction
-
-Users need to prepare their data in the form of [pairs.txt](pairs.txt) (miRNA-sequence  candidate-target-site-sequence), and then run the following command.
+## Sequence (binding site) level
+Users need to prepare their data in the form of [binding-site-pairs.txt](binding-site-pairs.txt) (miRNA-sequence  candidate-target-site-sequence), and then run the following command.
 
 ```
 cd output/exp-miRAW
@@ -92,3 +92,19 @@ The results will be shown in the predict folder as predict.tsv
 | ... | ... | ... |
 
 where p is the interaction probability
+
+## Transcript level
+Users need to prepare their data in the form of [transcript-level-pairs.txt](transcript-level-pairs.txt) (miRNA_id  transcript_id), provide the fasta files of corresponding miRNAs and transcripts, and then run the following command.
+
+```
+cd output/exp-deepTargetPro
+python ../../code/predict_transcript_level.py  --mirna_file ../../datasets/data/deepTargetPro/mirna.fasta --mrna_file ../../datasets/data/deepTargetPro/mrna.fasta --query_file ../../pairs.txt --model ./model/best_model/model.sav --outfile ./predict/ --device 0
+```
+The results will be shown in the predict folder as predict.tsv
+| miRNA-id | miRNA-sequence | transcript-id | candidate-target-site-sequence | candidate-target-site-location-on-transcript | p |  
+| :--: | :--: | :--: | :--: | :--: | :--: |   
+| hsa-let-7c-5p | UGAGGUAGUAGGUUGUAUGGUU | NM_005373 | GAAUCACUUUACUCGGACGGACACCUCUUUCCCAGGACCAAAAUACAGUCGUCGUCAUCUCAUUCU | 195 | 0.9969152212142944 |  
+| hsa-let-7c-5p | UGAGGUAGUAGGUUGUAUGGUU | NM_005373 | GACUACUAAUUGCUCUAGGAUAACCUAGAACCUUAAUCUUCUAAACUCCACGUGAAACGGACCCGU | 390 | 0.9963201284408569 |  
+| ... | ... | ... | :--: | :--: | :--: | 
+
+Note that each transcript may contain multiple candidate target sites for the corresponding miRNA; therefore, the results are presented with one row per candidate target site.
