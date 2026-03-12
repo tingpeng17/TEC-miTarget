@@ -100,7 +100,7 @@ Users need to prepare their data in the form of [transcript-level-pairs.txt](tra
 cd output/exp-deepTargetPro
 python ../../code/predict_transcript_level.py  --mirna_file ../../datasets/data/deepTargetPro/mirna.fasta --mrna_file ../../datasets/data/deepTargetPro/mrna.fasta --query_file ../../pairs.txt --model ./model/best_model/model.sav --outfile ./predict/ --device 0
 ```
-The results will be shown in the predict folder as predict.tsv
+TEC-miTarget first identifies several candidate target sites (CTSs) within transcripts for a given miRNA and then predicts the interactions between the miRNA and each CTS. The results of miRNA- CTS interactions will be shown in the predict folder as predict.tsv
 | miRNA-id | miRNA-sequence | transcript-id | candidate-target-site-sequence | candidate-target-site-location-on-transcript | p |  
 | :--: | :--: | :--: | :--: | :--: | :--: |   
 | hsa-let-7c-5p | UGAGGUAGUAGGUUGUAUGGUU | NM_005373 | GAAUCACUUUACUCGGACGGACACCUCUUUCCCAGGACCAAAAUACAGUCGUCGUCAUCUCAUUCU | 195 | 0.9969152212142944 |  
@@ -108,3 +108,11 @@ The results will be shown in the predict folder as predict.tsv
 | ... | ... | ... | :--: | :--: | :--: | 
 
 Note that each transcript may contain multiple candidate target sites for the corresponding miRNA; therefore, the results are presented with one row per candidate target site.
+The gene-level aggregated score can be calculated as the maximum interaction probability across all miRNA–CTS interactions associated with the gene, and the gene-level predicions are shown in predict-gene-level.tsv.
+| miRNA-id | transcript-id | p |  
+| :--: | :--: | :--: |  
+| hsa-let-7c-5p | NM_005373 | 0.9990253448486328 |  
+| hsa-miR-107 | NM_002970 | 0.9992885589599608 |  
+| ... | ... | ... |
+
+
