@@ -1,0 +1,10 @@
+hsa-let-7a-5p	NM_005373
+hsa-let-7b-5p	NM_001291429
+hsa-let-7c-5p	NM_005373
+hsa-miR-1-3p	NM_001292001
+hsa-miR-1-3p	NM_001354579
+hsa-miR-1-3p	NM_005163
+hsa-miR-106b-3p	NM_001099285
+hsa-miR-107	NM_002970
+hsa-miR-10a-5p	NM_001105541
+hsa-miR-10a-5p	NM_001166687
