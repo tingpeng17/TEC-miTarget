@@ -448,7 +448,7 @@ def main(args):
     idx = df.groupby(['query_ids', 'target_ids'])['predictions'].idxmax()
     df=df.loc[idx]
     df = df[["query_ids", "target_ids", "predictions"]]
-    df.to_csv(outPathAll[:-4]+'-gene-level.tsv', sep="\t", index=False)
+    df.to_csv(outPathPos[:-4]+'-gene-level.tsv', sep="\t", index=False)
     
     
 if __name__ == "__main__":
